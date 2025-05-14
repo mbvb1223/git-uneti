@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: .
+          path: ./
           retention-days: 2
 
   upload-coverage-report:
