@@ -32,6 +32,10 @@ jobs:
         with:
           name: coverage-report
           path: ./
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
