@@ -27,6 +27,11 @@ jobs:
     needs: build_test
     runs-on: ubuntu-latest
     steps:
+      - name: Download coverage report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-report
+          path: ./
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
