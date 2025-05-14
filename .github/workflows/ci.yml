@@ -15,6 +15,7 @@ jobs:
   build_test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
