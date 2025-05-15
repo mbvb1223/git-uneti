@@ -23,7 +23,7 @@ jobs:
           path: ./
           retention-days: 2
 
-  upload-coverage-report:
+  upload-github-page:
     needs: build_test
     runs-on: ubuntu-latest
     environment:
@@ -32,10 +32,10 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: Download coverage report artifact
+      - name: Download code
         uses: actions/download-artifact@v4
         with:
-          name: coverage-report
+          name: source-code
           path: ./
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
