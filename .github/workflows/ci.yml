@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Upload coverage report
+      - name: Upload code
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
+          name: source-code
           path: ./
           retention-days: 2
 
