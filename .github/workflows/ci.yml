@@ -24,6 +24,7 @@ jobs:
           retention-days: 2
 
   upload-github-page:
+    if: github.ref == 'refs/heads/main'
     needs: build_test
     runs-on: ubuntu-latest
     environment:
