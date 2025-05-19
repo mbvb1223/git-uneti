@@ -14,11 +14,10 @@ jobs:
         id: firebaseDeploy
         with:
           repoToken: ${{ secrets.PAT_TOKEN }}
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_UNETI }}"
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_UNETI }}
           expires: 30d
           projectId: khien-uneti
           channelId: preview
 
       - name: "Echo Preview URL"
-        run:
-          echo "Preview URL: ${{ steps.firebaseDeploy.outputs.details_url }}"
+        run: echo "${{ steps.firebaseDeploy.outputs.details_url }}"
