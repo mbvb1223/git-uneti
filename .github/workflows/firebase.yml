@@ -16,3 +16,4 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_UNETI }}"
           expires: 30d
           projectId: khien-uneti
+          entryPoint: .github/workflows/
