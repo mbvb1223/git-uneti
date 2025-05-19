@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - firebase
-    # Optionally configure to run only for specific files. For example:
-    # paths:
-    # - "website/**"
 
 jobs:
   build_and_preview:
