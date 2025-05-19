@@ -1,9 +1,9 @@
 name: Firebase Hosting
 
 on:
-  push:
+  pull_request:
     branches:
-      - firebase
+      - main
 
 jobs:
   build_and_preview:
