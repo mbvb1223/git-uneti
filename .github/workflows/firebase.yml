@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Debug token
-        run: echo "${{ secrets.UNETI_TOKEN }}"
+        run: echo "${{ secrets.PAT_TOKEN }}"
 #      - uses: actions/checkout@v4
 #      - uses: FirebaseExtended/action-hosting-deploy@v0
 #        id: firebaseDeploy
