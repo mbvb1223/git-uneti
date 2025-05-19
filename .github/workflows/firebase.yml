@@ -9,7 +9,7 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Comment Preview URL on PR.
+      - name: Comment Preview URL on PR..
         if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v4
         with:
