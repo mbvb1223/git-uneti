@@ -1,6 +1,6 @@
 name: Firebase Hosting
 
-oon:
+on:
   push:
     branches:
       - firebase
