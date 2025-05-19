@@ -29,5 +29,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.number }}
           body: |
-            🚀 Firebase Preview Deployment:
+            🚀 Firebase Preview:
             🔗 [View preview](${{ steps.firebaseDeploy.outputs.details_url }})
