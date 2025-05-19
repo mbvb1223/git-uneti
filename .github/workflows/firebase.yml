@@ -17,4 +17,3 @@ jobs:
           expires: 30d
           projectId: khien-uneti
           channelId: preview
-          entryPoint: .github/workflows/
