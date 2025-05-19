@@ -9,7 +9,20 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Comment Preview URL on PR..
+      - uses: actions/checkout@v4
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        id: firebaseDeploy
+        with:
+          repoToken: ${{ secrets.PAT_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_UNETI }}
+          expires: 30d
+          projectId: khien-uneti
+          channelId: preview-${{ github.event.number }}
+
+      - name: "Echo Preview URL"
+        run: echo "${{ steps.firebaseDeploy.outputs.details_url }}"
+
+      - name: Comment Preview URL on PR
         if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v4
         with:
@@ -17,3 +30,4 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             🚀 Firebase Preview Deployment:
+            🔗 [View preview](${{ steps.firebaseDeploy.outputs.details_url }})
