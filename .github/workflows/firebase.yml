@@ -22,7 +22,7 @@ jobs:
       - name: "Echo Preview URL"
         run: echo "${{ steps.firebaseDeploy.outputs.details_url }}"
 
-      - name: Comment Preview URL on PR.
+      - name: Comment Preview URL on PR
         if: github.event_name == 'pull_request'
         uses: peter-evans/create-or-update-comment@v4
         with:
