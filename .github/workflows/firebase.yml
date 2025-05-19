@@ -17,3 +17,7 @@ jobs:
           expires: 30d
           projectId: khien-uneti
           channelId: preview
+
+      - name: "Echo Preview URL"
+        run:
+          echo "Preview URL: ${{ steps.firebaseDeploy.outputs.details_url }}"
