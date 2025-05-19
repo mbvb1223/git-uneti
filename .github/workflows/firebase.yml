@@ -17,6 +17,6 @@ on:
         # - run: npm ci && npm run build
         - uses: FirebaseExtended/action-hosting-deploy@v0
           with:
-            firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+            firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_UNETI }}"
             projectId: khien-uneti
             channelId: live
